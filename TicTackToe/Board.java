@@ -73,17 +73,12 @@ public class Board {
         }
 
 
-        for(int j=0; j<size;j++){
-            if(board[inputRow][j].getPieceType() == PieceType.K || board[inputRow][j].getPieceType() != playingPiece)
-                 diagonalMatch = false;
-         }
-
         int i,j;
         i=j=0;
 
         while(i<size && j<size){
             if(board[i][j].getPieceType() == PieceType.K || board[i][j].getPieceType() != playingPiece)
-                 antiDiagonalMatch = false;
+                 diagonalMatch = false;
             i++;j++;
         }
 
